@@ -20,41 +20,20 @@ function blowCandle() {
   candle.innerText = "💨";
   candle.style.animation = "none";
 
-  for (let i = 0; i < 15; i++) {
-    const sparkle = document.createElement("span");
-    sparkle.classList.add("sparkle");
-    sparkle.innerText = "✨";
-    sparkle.style.left = Math.random() * 100 + "%";
-    sparkle.style.top = Math.random() * 100 + "%";
-    document.body.appendChild(sparkle);
-
-    setTimeout(() => sparkle.remove(), 1500);
-  }
+  for (let i = 0; i < 15; i++) 
 }
 
-function playMainSong() {
-  bgm.pause();
+const song1 = document.getElementById("song1");
+const song2 = document.getElementById("song2");
+
+function playSong1() {
+  song2.pause();
   song2.currentTime = 0;
+  song1.play();
+}
+
+function playSong2() {
+  song1.pause();
+  song1.currentTime = 0;
   song2.play();
-  songInfo.classList.remove("hidden");
-
-  setTimeout(() => {
-    song2.pause();
-    songInfo.classList.add("hidden");
-    bgm.play();
-  }, 25000);
 }
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "💙";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = Math.random() * 20 + 15 + "px";
-  document.querySelector(".hearts").appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 6000);
-}
-
-setInterval(createHeart, 500);
