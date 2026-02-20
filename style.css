@@ -1,14 +1,21 @@
 body {
   margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #87CEEB, #bdeaff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   font-family: Arial, sans-serif;
-  background: linear-gradient(#0a1a3a, #132b5c);
-  color: #e6f0ff;
 }
 
 .container {
-  display: flex;
-  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
 }
+
 
 .card {
   min-width: 100%;
