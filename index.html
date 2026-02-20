@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Romiii</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bgm" src="bgm.mp3" loop></audio>
+  <audio id="song2" src="lagjaa_gale.mp3"></audio>
+
+  <div class="container">
+
+    <div class="card active">
+      <h2>For the cutest and sweetest guy I know 💙</h2>
+      <button onclick="nextCard()">Next</button>
+    </div>
+
+    <div class="card">
+      <h2>Blow a candle 🕯️</h2>
+      <p>Make a wish ✨</p>
+      <div class="candle" onclick="blowCandle()">🕯️</div>
+      <button onclick="nextCard()">Next</button>
+    </div>
+
+    <div class="card">
+      <h2>A little letter for you 💌</h2>
+      <p class="letter">
+        Hey Romiii,<br><br>
+        Just wanted to say you’re genuinely one of the nicest people I know.
+        Your presence makes things lighter, and that’s rare.
+        Never lose this part of you 🤍<br><br>
+        — From someone who appreciates you
+      </p>
+      <button onclick="nextCard()">Next</button>
+    </div>
+
+    <!-- LAST SLIDE -->
+    <div class="card">
+      <h2>A song for you 🎶</h2>
+
+      <div id="songInfo" class="song-info hidden">
+        <h3>Lag Jaa Gale 🎵</h3>
+        <p class="lyrics">
+          Lag jaa gale ke phir ye haseen raat ho na ho…<br>
+          Shayad phir is janam mein mulaqat ho na ho…
+        </p>
+      </div>
+
+      <button onclick="playMainSong()">Play</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
