@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#0a1a3a, #132b5c);
+  color: #e6f0ff;
+}
+
+.container {
+  display: flex;
+  overflow: hidden;
+}
+
+.card {
+  min-width: 100%;
+  padding: 30px;
+  text-align: center;
+  display: none;
+}
+
+.card.active {
+  display: block;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #ffd54f;
+  color: #000;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Candle */
+.candle {
+  font-size: 80px;
+  cursor: pointer;
+  animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+  0% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+  100% { transform: rotate(-1deg); }
+}
+
+/* Sparkles */
+.sparkle {
+  position: fixed;
+  font-size: 20px;
+  animation: sparkleFloat 1.5s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes sparkleFloat {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-60px) scale(1.5); }
+}
+
+/* Vintage Letter */
+.letter {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #2c2c2c;
+  background:
+    linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.02),
+      rgba(0,0,0,0.02) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    #f7f1e3;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Song Info */
+.song-info {
+  margin-top: 15px;
+  animation: fadeUp 1.2s ease;
+}
+
+.song-info h3 {
+  color: #cfe2ff;
+}
+
+.lyrics {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+  }
