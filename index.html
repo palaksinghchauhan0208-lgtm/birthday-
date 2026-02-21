@@ -24,7 +24,38 @@ body {
 }
 
 .card {
-  display: none;
+  display: none;<script>
+let currentCard = 0;
+const cards = document.querySelectorAll(".card");
+
+function nextCard() {
+  cards[currentCard].classList.remove("active");
+  currentCard++;
+  if (currentCard < cards.length) {
+    cards[currentCard].classList.add("active");
+  }
+}
+
+/* MUSIC CONTROL */
+
+function playSong1() {
+  const song1 = document.getElementById("song1");
+  const song2 = document.getElementById("song2");
+
+  song2.pause();
+  song2.currentTime = 0;
+  song1.play();
+}
+
+function playSong2() {
+  const song1 = document.getElementById("song1");
+  const song2 = document.getElementById("song2");
+
+  song1.pause();
+  song1.currentTime = 0;
+  song2.play();
+}
+</script>
 }
 
 .card.active {
