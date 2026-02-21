@@ -92,27 +92,54 @@ button:hover {
   <!-- Slide 2 -->
   <div class="card">
     <h2>Blow the candle 🕯️</h2>
-    <p>Make a wish ✨</p>
+     <p>Make a wish ✨</p>
     <button onclick="nextCard()">Next</button>
   </div>
-
   <!-- Slide 3 -->
-  <div class="card">
-    <h2>A song for you 🎶</h2>
-    <p>Lag Jaa Gale 💙</p>
-    <button onclick="playSong2()">Your Favourite</button>
-    <br>
-    <button onclick="nextCard()">Next</button>
+<div class="card">
+  <h2>Your Favourite 💙</h2>
+
+  <div id="lyrics" style="display:none; margin-top:15px;">
+    <p>Lag jaa gale ke phir...</p>
+    <p>Yeh haseen raat ho na ho...</p>
+    <p>Shayad phir iss janam mein...</p>
+    <p>Mulaqat ho na ho... 💙</p>
   </div>
 
-  <!-- Slide 4 -->
-  <div class="card">
-    <h2>💌 A Letter For You</h2>
-    <p>
-      You make ordinary days feel magical ✨  
-      I hope your birthday is full of happiness and smiles 💙
-    </p>
-  </div>
+  <button onclick="startFavourite()">Play</button>
+  <br>
+  <button onclick="nextCard()">Next</button>
+    </div>
+
+<!-- Slide 4 -->
+<div class="card">
+  <h2>💌 A Letter For You</h2>
+
+  <p>
+    Romiii 💙<br><br>
+
+    I don’t really know how to put this perfectly into words,
+    but I just wanted to make something a little special for you.
+
+    You make ordinary days feel magical ✨
+    and even the simplest conversations with you
+    somehow become my favourite moments.
+
+    I genuinely hope this year brings you
+    everything you’ve been quietly wishing for —
+    happiness, success, peace, and so many reasons to smile.
+
+    Stay the way you are —
+    kind, funny, sweet, and effortlessly you.
+
+    I’m really grateful our paths crossed 💙
+    and I hope this small surprise made you smile.
+
+    Happy Birthday 🕯️✨
+  </p>
+
+  <button onclick="nextCard()">End 💙</button>
+</div>
 
 </div>
 
