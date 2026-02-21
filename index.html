@@ -1,59 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>For Romiii</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Romiii 💙</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #87CEEB, #B0E0E6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.card {
+  display: none;
+}
+
+.card.active {
+  display: block;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 25px;
+  background: #1e90ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #187bcd;
+}
+</style>
 </head>
-<div class="hearts"></div><body>
 
-  <!-- Background Music -->
-  <audio id="bgm" src="bgm.mp3" loop></audio>
-  <audio id="song2" src="lagjaa_gale.mp3"></audio>
+<body>
 
-  <div class="container">
+<div class="container">
 
-    <div class="card active">
-      <h2>For the cutest and sweetest guy I know 💙</h2>
-      <button onclick="nextCard()">Next</button>
-    </div>
-
-    <div class="card">
-      <h2>Blow a candle 🕯️</h2>
-      <p>Make a wish ✨</p>
-      <div class="candle" onclick="blowCandle()">🕯️</div>
-      <button onclick="nextCard()">Next</button>
-    </div>
-
-    <div class="card">
-      <h2>A little letter for you 💌</h2>
-      <p class="letter">
-        Hey Romiii,<br><br>
-        Just wanted to say you’re genuinely one of the nicest people I know.
-        Your presence makes things lighter, and that’s rare.
-        Never lose this part of you 🤍<br><br>
-        — From someone who appreciates you
-      </p>
-      <button onclick="nextCard()">Next</button>
-    </div>
-
-    <!-- LAST SLIDE -->
-    <div class="card">
-      <h2>A song for you 🎶</h2>
-
-      <div id="songInfo" class="song-info hidden">
-        <h3>Lag Jaa Gale 🎵</h3>
-        <p class="lyrics">
-          Lag jaa gale ke phir ye haseen raat ho na ho…<br>
-          Shayad phir is janam mein mulaqat ho na ho…
-        </p>
-      </div>
-
-      <button onclick="playMainSong()">Play</button>
-    </div>
-
+  <!-- Slide 1 -->
+  <div class="card active">
+    <h2>For the cutest and sweetest guy I know 💙</h2>
+    <button onclick="playSong1(); nextCard()">Next</button>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Slide 2 -->
+  <div class="card">
+    <h2>Blow the candle 🕯️</h2>
+    <p>Make a wish ✨</p>
+    <button onclick="nextCard()">Next</button>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="card">
+    <h2>A song for you 🎶</h2>
+    <p>Lag Jaa Gale 💙</p>
+    <button onclick="playSong2()">Your Favourite</button>
+    <br>
+    <button onclick="nextCard()">Next</button>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="card">
+    <h2>💌 A Letter For You</h2>
+    <p>
+      You make ordinary days feel magical ✨  
+      I hope your birthday is full of happiness and smiles 💙
+    </p>
+  </div>
+
+</div>
+
+<audio id="song1" src="song1.mp3"></audio>
+<audio id="song2" src="song2.mp3"></audio>
+
+<script>
+let currentCard = 0;
+const cards = document.querySelectorAll(".card");
+
+function nextCard() {
+  cards[currentCard].classList.remove("active");
+  currentCard++;
+  if (currentCard < cards.length) {
+    cards[currentCard].classList.add("active");
+  }
+}
+
+const song1 = document.getElementById("song1");
+const song2 = document.getElementById("song2");
+
+function playSong1() {
+  song2.pause();
+  song2.currentTime = 0;
+  song1.play();
+}
+
+function playSong2() {
+  song1.pause();
+  song1.currentTime = 0;
+  song2.play();
+}
+</script>
+
 </body>
-  </html>
+</html>
